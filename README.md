@@ -1,18 +1,18 @@
 ####What is it?
 
-A PoshCI step that performs search and replace
+A [PoshCI](https://github.com/PoshCI/PoshCI) step that performs search and replace
 
 ####How do I install it?
 
 ```PowerShell
-Add-CIStep -Name "YOUR-CISTEP-NAME" -ModulePackageId "PoshCI.SearchReplace"
+Add-CIStep -Name "YOUR-CISTEP-NAME" -ModulePackageId "SearchReplace"
 ```
 
 ####What parameters are available?
 #####Path
-a string[] representing one or more path specifications for files to perform replacements on; Wildcards allowed
+a String[] representing one or more path specifications for files to perform replacements on; Wildcards allowed
 ```PowerShell
-[string[]]
+[String[]]
 [Parameter(
 	Mandatory=$true,
     ValueFromPipeline=$true,
@@ -21,18 +21,18 @@ $Paths
 ```
 
 #####Recurse
-a switch representing whether to perform replacements on files located in sub directories of $Paths (at any depth)
+a Switch representing whether to perform replacements on files located in sub directories of $Paths (at any depth)
 ```PowerShell
-[switch]
+[Switch]
 [Parameter(
 	ValueFromPipelineByPropertyName=$true)]
 $Recurse
 ```
 
 #####Replacements
-A tuple[string,string][] representing `Regex string` => `Replacement string` pairs. Replacement is performed leveraging PowerShells `-creplace` operator. A fairly comprehensive writeup is [here](http://www.regular-expressions.info/powershell.html) 
+A Tuple[String,String][] representing `Regex string` => `Replacement string` pairs. Replacement is performed leveraging PowerShells `-creplace` operator. A fairly comprehensive writeup is [here](http://www.regular-expressions.info/powershell.html) 
 ```PowerShell
-[tuple[string,string][]]
+[Tuple[String,String][]]
 [Parameter(
 	Mandatory=$true,
 	ValueFromPipelineByPropertyName=$true)]
