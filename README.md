@@ -1,24 +1,44 @@
-**What is it?**
-A [Posh-CI](https://github.com/Posh-CI/Posh-CI) step for  invoking [Git.exe](http://git-scm.com/downloads)
+####What is it?
 
-**How do I use it?**
+A PoshCI step that performs search and replace
 
-add an entry in your ci plans `Packages.config` file
-```Xml
-<packages>
-  <package id="posh-ci-git" />
-  <!-- other dependencies snipped -->
-</packages>
-```
+####How do I install it?
 
-then just pass variables to Invoke-CIPlan according to the following parameters:
-
-#####GitParameters Parameter
-an array of parameters to pass to Git.exe
 ```PowerShell
-[string[]][Parameter(ValueFromPipelineByPropertyName = $true)]$GitParameters
+Add-CIStep -Name "YOUR-CISTEP-NAME" -ModulePackageId "PoshCI.SearchReplace"
 ```
 
-**What's the build Status?**
-![](https://ci.appveyor.com/api/projects/status/tshm942ilarekod7?svg=true)
+####What parameters are available?
+#####Path
+a string[] representing one or more path specifications for files to perform replacements on; Wildcards allowed
+```PowerShell
+[string[]]
+[Parameter(
+	Mandatory=$true,
+    ValueFromPipeline=$true,
+	ValueFromPipelineByPropertyName=$true)]
+$Paths
+```
+
+#####Recurse
+a switch representing whether to perform replacements on files located in sub directories of $Paths (at any depth)
+```PowerShell
+[switch]
+[Parameter(
+	ValueFromPipelineByPropertyName=$true)]
+$Recurse
+```
+
+#####Replacements
+A tuple[string,string][] representing `Regex string` => `Replacement string` pairs. Replacement is performed leveraging PowerShells `-creplace` operator. A fairly comprehensive writeup is [here](http://www.regular-expressions.info/powershell.html) 
+```PowerShell
+[tuple[string,string][]]
+[Parameter(
+	Mandatory=$true,
+	ValueFromPipelineByPropertyName=$true)]
+$Replacements
+```
+
+####What's the build status?
+![](https://ci.appveyor.com/api/projects/status/sye7k4oc83plnib3?svg=true)
 
