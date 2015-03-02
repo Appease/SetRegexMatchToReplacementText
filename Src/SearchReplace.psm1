@@ -2,19 +2,19 @@
 $ErrorActionPreference = 'Stop'
 
 function Invoke-CIStep(
-[string[]]
+[String[]]
 [Parameter(
 	Mandatory=$true,
     ValueFromPipeline=$true,
 	ValueFromPipelineByPropertyName=$true)]
 $Paths,
 
-[switch]
+[Switch]
 [Parameter(
 	ValueFromPipelineByPropertyName=$true)]
 $Recurse,
 
-[tuple[string,string][]]
+[Tuple[String,String][]]
 [Parameter(
 	Mandatory=$true,
 	ValueFromPipelineByPropertyName=$true)]
@@ -27,7 +27,6 @@ $Replacements){
         sc -Path $item -Value $itemContent
     }
 
-    Write-Debug "checking '$LastExitCode': $LastExitCode"
     if ($LastExitCode -ne 0) {
         throw $Error
     }

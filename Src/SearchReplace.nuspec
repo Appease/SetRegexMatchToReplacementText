@@ -1,17 +1,17 @@
 <?xml version="1.0" encoding="utf-8"?>
 <package xmlns="http://schemas.microsoft.com/packaging/2010/07/nuspec.xsd">
 	<metadata>
-		<id>PoshCI.SearchReplace</id>
+		<id>SearchReplace</id>
 		<version>$version$</version>
 		<authors>Chris Dostert</authors>
 		<requireLicenseAcceptance>false</requireLicenseAcceptance>
 		<description>
-			A Posh-CI step that performs search and replace
+			A PoshCI step that performs search and replace
 		</description>
-		<tags>Powershell Posh-CI SearchReplace Regex</tags>
-		<projectUrl>https://github.com/PoshCI/PoshCI.SearchReplace</projectUrl>
+		<tags>Powershell PoshCI SearchReplace Regex</tags>
+		<projectUrl>https://github.com/PoshCI/SearchReplace</projectUrl>
 	</metadata>	
 	<files>
-		<file src="**" target="tools\PoshCI.SearchReplace" exclude="**\.nuspec"/>
+		<file src="**" target="tools\SearchReplace" exclude="**\.nuspec"/>
 	</files>
 </package>
