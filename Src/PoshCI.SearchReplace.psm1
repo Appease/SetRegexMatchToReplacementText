@@ -10,6 +10,8 @@ function Invoke-CIStep(
 $Paths,
 
 [switch]
+[Parameter(
+	ValueFromPipelineByPropertyName=$true)]
 $Recurse,
 
 [tuple[string,string][]]
@@ -18,7 +20,7 @@ $Recurse,
 	ValueFromPipelineByPropertyName=$true)]
 $Replacements){
 
-    foreach($item in Get-ChildItem -Path $Paths -Recurse:$Recurse.IsPresent | ?{ !$_.PSIsContainer } ){
+    foreach($item in Get-ChildItem -Path $Paths -Recurse:$Recurse | ?{ !$_.PSIsContainer } ){
     
         $itemContent = (gc $item)
         $Replacements|%{ $itemContent -creplace $_.Item1,$_.Item2 }
