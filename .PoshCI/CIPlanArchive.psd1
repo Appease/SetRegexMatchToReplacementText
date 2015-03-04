@@ -5,9 +5,9 @@
 			PackageId = [String]"CreatePoshCIPackage"; 
 			PackageVersion = [String]"0.0.2"
 		}; 
-		PushNupkg = [PSCustomObject]@{
-			Name = [String]"PushNupkg"; 
-			PackageId = [String]"PushNupkg"; 
+		PushPoshCIPackage = [PSCustomObject]@{
+			Name = [String]"PushPoshCIPackage"; 
+			PackageId = [String]"PushPoshCIPackage"; 
 			PackageVersion = [String]"0.0.6"; 
 			Parameters = [Hashtable]@{
 				IncludeNupkgFilePath = [String[]]@(
