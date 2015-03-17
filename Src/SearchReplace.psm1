@@ -1,7 +1,7 @@
 # halt immediately on any errors which occur in this module
 $ErrorActionPreference = 'Stop'
 
-function Invoke-CIStep(
+function Invoke-PoshDevOpsTask(
 [String[]]
 [Parameter(
 	Mandatory=$true,
@@ -32,4 +32,4 @@ $Replacements){
     }
 }
 
-Export-ModuleMember -Function Invoke-CIStep
+Export-ModuleMember -Function Invoke-PoshDevOpsTask

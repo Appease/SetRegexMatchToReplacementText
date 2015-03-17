@@ -6,10 +6,10 @@
 		<authors>Chris Dostert</authors>
 		<requireLicenseAcceptance>false</requireLicenseAcceptance>
 		<description>
-			A PoshCI step that performs search and replace
+			A PoshDevOps task that performs search and replace
 		</description>
-		<tags>Powershell PoshCI SearchReplace Regex</tags>
-		<projectUrl>https://github.com/PoshCI/SearchReplace</projectUrl>
+		<tags>Powershell PoshDevOps SearchReplace Regex</tags>
+		<projectUrl>https://github.com/PoshDevOps/SearchReplace</projectUrl>
 	</metadata>	
 	<files>
 		<file src="**" target="tools\SearchReplace" exclude="**\.nuspec"/>

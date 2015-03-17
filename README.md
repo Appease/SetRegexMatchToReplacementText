@@ -1,11 +1,11 @@
 ####What is it?
 
-A [PoshCI](https://github.com/PoshCI/PoshCI) step that performs search and replace
+A [PoshDevOps](https://github.com/PoshDevOps/PoshDevOps) step that performs search and replace
 
 ####How do I install it?
 
 ```PowerShell
-Add-CIStep -Name "YOUR-CISTEP-NAME" -ModulePackageId "SearchReplace"
+Add-PoshDevOpsTask -Name "YOUR-CISTEP-NAME" -ModulePackageId "SearchReplace"
 ```
 
 ####What parameters are available?
