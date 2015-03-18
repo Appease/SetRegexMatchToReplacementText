@@ -40,5 +40,5 @@ $Replacements
 ```
 
 ####What's the build status?
-![](https://ci.appveyor.com/api/projects/status/sye7k4oc83plnib3?svg=true)
+![](https://ci.appveyor.com/api/projects/status/6djylr783ah3h1hc?svg=true)
 
