@@ -1,6 +1,6 @@
 ####What is it?
 
-A [PoshDevOps](https://github.com/PoshDevOps/PoshDevOps) step that performs search and replace
+A [PoshDevOps](https://github.com/PoshDevOps/PoshDevOps) task that performs search and replace
 
 ####How do I install it?
 

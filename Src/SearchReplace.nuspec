@@ -6,7 +6,7 @@
 		<authors>Chris Dostert</authors>
 		<requireLicenseAcceptance>false</requireLicenseAcceptance>
 		<description>
-			A PoshDevOps task that performs search and replace
+			A Poshtask that performs search and replace
 		</description>
 		<tags>Powershell PoshDevOps SearchReplace Regex</tags>
 		<projectUrl>https://github.com/PoshDevOps/SearchReplace</projectUrl>
