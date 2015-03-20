@@ -5,7 +5,7 @@ A [PoshDevOps](https://github.com/PoshDevOps/PoshDevOps) task that performs sear
 ####How do I install it?
 
 ```PowerShell
-Add-PoshDevOpsTask -Name "YOUR-CISTEP-NAME" -ModulePackageId "SearchReplace"
+Add-PoshDevOpsTask -Name "YOUR-TASK-NAME" -ModulePackageId "SearchReplace"
 ```
 
 ####What parameters are available?
