@@ -9,7 +9,7 @@
                                          "ProjectUrl":  "https://github.com/Appease/SetRegexMatchesToReplacementText",
                                          "Id":  "SetRegexMatchesToReplacementText",
                                          "IconUrl":  "http://res.cloudinary.com/hibczhd9m/image/upload/c_crop,w_350/v1423785217/NuGet.org/5711875.png",
-                                         "Description":  "Sets one or more regex matches to replacement text",                                         
+                                         "Description":  "Sets regex matches to a replacement text",                                         
                                          "Contributor":  {
                                                              "Name":  "Chris Dostert"
                                                          },
