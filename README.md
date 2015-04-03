@@ -16,10 +16,10 @@ Add-AppeaseTask `
 ####What parameters are required?
 
 #####Path
-description: a `string[]` representing one or more path specifications for files to perform replacements on; Wildcards allowed
+description: a `string[]` representing one or more path specifications for files to perform replacements on; Wildcards allowed.
 
 #####Regex
-description: a `string` representing the regex to pass to the PowerShell `-creplace` operator. A fairly comprehensive writeup is [here](http://www.regular-expressions.info/powershell.html) 
+description: a `string` representing the regex to pass to the PowerShell `-creplace` operator (see: [here](http://www.regular-expressions.info/powershell.html)).
 
 #####ReplacementText
 description: a `string` representing the replacement text to pass to the PowerShell `-creplace` operator.
@@ -27,4 +27,4 @@ description: a `string` representing the replacement text to pass to the PowerSh
 ####What parameters are optional?
 
 #####Recurse
-description: a `switch` representing whether to perform replacements on files located in sub directories of $Paths (at any depth)
+description: a `switch` representing whether to perform replacements on files located in sub directories of $Path @ any depth.
