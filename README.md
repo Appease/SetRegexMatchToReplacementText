@@ -1,44 +1,30 @@
+![](https://ci.appveyor.com/api/projects/status/6djylr783ah3h1hc?svg=true)
+
 ####What is it?
 
-A [PoshDevOps](https://github.com/PoshDevOps/PoshDevOps) task that performs search and replace
+An [Appease](http://appease.io) task template that sets one or more regex matches to replacement text
 
 ####How do I install it?
 
 ```PowerShell
-Add-PoshDevOpsTask -Name "YOUR-TASK-NAME" -ModulePackageId "SearchReplace"
+Add-AppeaseTask `
+    -DevOpName YOUR-DEVOP-NAME `
+    -Name YOUR-TASK-NAME `
+    -TemplateId SetRegexMatchesToReplacementText
 ```
 
-####What parameters are available?
+####What parameters are required?
+
 #####Path
-a String[] representing one or more path specifications for files to perform replacements on; Wildcards allowed
-```PowerShell
-[String[]]
-[Parameter(
-	Mandatory=$true,
-    ValueFromPipeline=$true,
-	ValueFromPipelineByPropertyName=$true)]
-$Paths
-```
+description: a `string[]` representing one or more path specifications for files to perform replacements on; Wildcards allowed
+
+#####Regex
+description: a `string` representing the regex to pass to the PowerShell `-creplace` operator. A fairly comprehensive writeup is [here](http://www.regular-expressions.info/powershell.html) 
+
+#####ReplacementText
+description: a `string` representing the replacement text to pass to the PowerShell `-creplace` operator.
+
+####What parameters are optional?
 
 #####Recurse
-a Switch representing whether to perform replacements on files located in sub directories of $Paths (at any depth)
-```PowerShell
-[Switch]
-[Parameter(
-	ValueFromPipelineByPropertyName=$true)]
-$Recurse
-```
-
-#####Replacements
-A Tuple[String,String][] representing `Regex string` => `Replacement string` pairs. Replacement is performed leveraging PowerShells `-creplace` operator. A fairly comprehensive writeup is [here](http://www.regular-expressions.info/powershell.html) 
-```PowerShell
-[Tuple[String,String][]]
-[Parameter(
-	Mandatory=$true,
-	ValueFromPipelineByPropertyName=$true)]
-$Replacements
-```
-
-####What's the build status?
-![](https://ci.appveyor.com/api/projects/status/6djylr783ah3h1hc?svg=true)
-
+description: a `switch` representing whether to perform replacements on files located in sub directories of $Paths (at any depth)

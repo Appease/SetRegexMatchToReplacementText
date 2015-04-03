@@ -1,0 +1,23 @@
+{
+    "Name":  "Publish",
+    "Tasks":  [
+                  {
+                      "TemplateId":  "PublishAppeaseTaskTemplate",
+                      "Name":  "Publish to official Appease feed",
+                      "TemplateVersion":  "0.0.12",
+                      "Parameters":  {
+                                         "ProjectUrl":  "https://github.com/Appease/SetRegexMatchesToReplacementText",
+                                         "Id":  "SetRegexMatchesToReplacementText",
+                                         "IconUrl":  "http://res.cloudinary.com/hibczhd9m/image/upload/c_crop,w_350/v1423785217/NuGet.org/5711875.png",
+                                         "Description":  "Sets one or more regex matches to replacement text",                                         
+                                         "Contributor":  {
+                                                             "Name":  "Chris Dostert"
+                                                         },
+                                         "File":  {
+                                                      "Include":  "Src\\SetRegexMatchesToReplacementText.psm1",
+                                                      "Destination":  "SetRegexMatchesToReplacementText"
+                                                  }
+                                     }
+                  }
+              ]
+}
