@@ -2,7 +2,7 @@
 
 ####What is it?
 
-An [Appease](http://appease.io) task template that sets one or more regex matches to replacement text
+An [Appease](http://appease.io) task template that sets regex matches to a replacement text
 
 ####How do I install it?
 
